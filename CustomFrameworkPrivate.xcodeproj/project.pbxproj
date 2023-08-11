@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		329154092A86EB88007BBF35 /* CustomFrameworkPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 329154082A86EB88007BBF35 /* CustomFrameworkPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		329154102A86EBA0007BBF35 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3291540F2A86EBA0007BBF35 /* Manager.swift */; };
+		329154122A86EBC2007BBF35 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329154112A86EBC2007BBF35 /* Worker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		329154052A86EB88007BBF35 /* CustomFrameworkPrivate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomFrameworkPrivate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		329154082A86EB88007BBF35 /* CustomFrameworkPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomFrameworkPrivate.h; sourceTree = "<group>"; };
+		3291540F2A86EBA0007BBF35 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		329154112A86EBC2007BBF35 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 			isa = PBXGroup;
 			children = (
 				329154082A86EB88007BBF35 /* CustomFrameworkPrivate.h */,
+				3291540F2A86EBA0007BBF35 /* Manager.swift */,
+				329154112A86EBC2007BBF35 /* Worker.swift */,
 			);
 			path = CustomFrameworkPrivate;
 			sourceTree = "<group>";
@@ -93,6 +99,7 @@
 				TargetAttributes = {
 					329154042A86EB88007BBF35 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -129,6 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				329154102A86EBA0007BBF35 /* Manager.swift in Sources */,
+				329154122A86EBC2007BBF35 /* Worker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 		3291540D2A86EB88007BBF35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -281,6 +291,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -289,6 +300,7 @@
 		3291540E2A86EB88007BBF35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
